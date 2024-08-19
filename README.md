@@ -32,10 +32,14 @@ The script will upload this information to an Azure Blob Storage as a `.json` fi
    - At the top of the script, locate the following lines:
      ```javascript
      // @match        https://nl116.grepolis.com/game/*
-     let StorageToken = '';
+     const StorageToken = 'put down your token here';
+     const storageAccount = "put down your storage account name";
+     const containerName = "put down your container name";
+     
      ```
-   - Replace the empty string `''` with the Azure Blob Storage access token provided by your alliance. This token allows secure access to the storage location. Be sure not to share this token!
-   - Replace the 'nl116' to the world that you want this script to work on.
+   - Replace the 'nl116' in the @match to the world that you want this script to work on.
+   - Replace the string with the Azure Blob Storage access token/storageaccount name / container name provided by your alliance. This token allows secure access to the storage location. Be sure not to share this token!
+  
 
 4. **Save the Script**:
    - After pasting and configuring the script, click **"File"** and then **"Save"**.
