@@ -307,8 +307,7 @@
                 uploadDataToBlobStorage(allPlayerDataJson, playerName);
            }
             async function uploadDataToBlobStorage(data, playerName) {
-                const storageAccount = "grepotroopcounter";
-                const containerName = "troepenoverzichtspelers";
+                
                 const blobName = `${playerName}.json`;
                 const sasToken = Storagetoken;
                 const url = `https://${storageAccount}.blob.core.windows.net/${containerName}/${blobName}?${sasToken}`;
