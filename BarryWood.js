@@ -240,10 +240,8 @@
                }
  
                // Getting all the cities units
-               let playerName = Game.player_name;
-               if (playerName.startsWith('.')) {
-                   playerName = playerName.substring(1);
-               }
+              let playerName = Game.player_name.replace(/[^a-zA-Z0-9\s]/g, '');
+               
                for (const fragmentId in ITowns.all_units.fragments) {
                    if (ITowns.all_units.fragments.hasOwnProperty(fragmentId)) {
                        const fragment = ITowns.all_units.fragments[fragmentId];
