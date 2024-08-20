@@ -17,14 +17,14 @@
     $(document).ready(function () {
         if (Game.world_id === "nl116") {
             initMutationObserver();
-            addTroopCounterButton();
+            AddUploadButton();
         }
 
                 
  
  
-        function addTroopCounterButton() {
-            if (document.getElementById('troopCounterButton') === null) {
+        function AddUploadButton() {
+            if (document.getElementById('UploadButton') === null) {
                 var a = document.createElement('div');
                 a.id = "troopCounterButton";
                 a.className = 'btn_settings circle_button_small';
