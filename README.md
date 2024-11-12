@@ -36,8 +36,14 @@ The script will upload this information to an Azure Blob Storage as a `.json` fi
      const storageAccount = "put down your storage account name";
      const containerName = "put down your container name";
      
+      if (Game.world_id === "nl116") {
+            initMutationObserver();
+            AddUploadButton();
+        }
+
+     
      ```
-   - Replace the 'nl116' in the @match to the world that you want this script to work on.
+   - Replace the 'nl116' in the @match and the if (...) to the world that you want this script to work on.
    - Replace the string with the Azure Blob Storage access token/storageaccount name / container name provided by your alliance. This token allows secure access to the storage location. Be sure not to share this token!
   
 
