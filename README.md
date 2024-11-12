@@ -31,19 +31,13 @@ The script will upload this information to an Azure Blob Storage as a `.json` fi
 3. **Configure the Azure Blob Storage Token and world**:
    - At the top of the script, locate the following lines:
      ```javascript
-     // @match        https://nl116.grepolis.com/game/*
-     const StorageToken = 'put down your token here';
+     const sasToken = 'put down your token here';
      const storageAccount = "put down your storage account name";
      const containerName = "put down your container name";
-     
-      if (Game.world_id === "nl116") {
-            initMutationObserver();
-            AddUploadButton();
-        }
-
+     const world = 114;
      
      ```
-   - Replace the 'nl116' in the @match and the if (...) to the world that you want this script to work on.
+   - Replace the 'const world = 114', to the world that you want this script to work on.
    - Replace the string with the Azure Blob Storage access token/storageaccount name / container name provided by your alliance. This token allows secure access to the storage location. Be sure not to share this token!
   
 
